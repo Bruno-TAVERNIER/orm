@@ -21,7 +21,8 @@ $emplacementsR = $entityManager->getRepository('Emplacements');
 $emplacements = $emplacementsR->findAll();
 echo '<ul>';
 foreach($emplacements as $place){
-  echo '<li>' . $place->getId() . ': ' . $place->getNom() . '</li>';
+  /* ?-> opérateur nullsafe */
+  echo '<li>' . $place->getId() . ': ' . $place->getNom() . ' ' . $place?->getProduit()?->getNom() .  '</li>';
 }
 echo '</ul>';
 
@@ -52,7 +53,7 @@ $produits = $produitsR->findAll();
             <li><?= $v->getPrenom(); ?></li>
           <?php endforeach; ?>
         </ol>
-      </td>
+      </td> 
     </tr>
   <?php endforeach; ?>
 </table>

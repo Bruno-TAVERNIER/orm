@@ -1,6 +1,7 @@
 <?php
 // entité: représentation objet d'une table
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\AbstractLazyCollection;
 
 /**
 * @ORM\Entity

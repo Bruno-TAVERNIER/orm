@@ -18,6 +18,11 @@ class Emplacements {
    */
   protected $nom;
 
+  /**
+   * @ORM\OneToONe(targetEntity="Produits", mappedBy="emplacement")
+   */
+  protected $produit;
+
   public function getId(): int {
     return $this->id;
   }
@@ -27,4 +32,9 @@ class Emplacements {
   public function setNom(string $n){
     $this->nom = $n;
   }
+  // nullable => type Produit ou null
+  public function getProduit(): ?Produits{
+    return $this->produit;
+  }
+
 }

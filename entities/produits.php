@@ -26,12 +26,12 @@ class Produits {
   protected $prix;
 
   /**
-   * @ORM\ManyToOne(targetEntity="Categories")
+   * @ORM\ManyToOne(targetEntity="Categories", inversedBy="Produits")
    */
   protected $categorie;
 
   /**
-   * @ORM\OneToONe(targetEntity="Emplacements")
+   * @ORM\OneToONe(targetEntity="Emplacements", inversedBy="Produits")
    */
   protected $emplacement;
 
