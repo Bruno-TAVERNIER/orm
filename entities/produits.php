@@ -36,7 +36,7 @@ class Produits {
   protected $emplacement;
 
   /**
-   * @ORM\ManyToMany(targetEntity="Vendeurs")
+   * @ORM\ManyToMany(targetEntity="Vendeurs", cascade={"persist", "remove"})
    */
   protected $vendeurs;
 

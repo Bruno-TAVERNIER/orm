@@ -4,7 +4,7 @@ require_once "entities/Categories.php";
 require_once "entities/Produits.php";
 require_once "entities/Emplacements.php";
 require_once "entities/vendeurs.php";
-use Doctrine\ORM\Query\ResultSetMapping;
+
 
 /* catégories */
 $categorieRepository = $entityManager->getRepository('Categories');
